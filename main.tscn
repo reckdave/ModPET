@@ -1,18 +1,105 @@
-[gd_scene format=3 uid="uid://c4so3uneuyysb"]
+[gd_scene load_steps=4 format=3 uid="uid://c4so3uneuyysb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4njdt"]
+bg_color = Color(0.347817, 0.347817, 0.347817, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4ii8"]
+bg_color = Color(0.165656, 0.165656, 0.165656, 1)
+
+[sub_resource type="Theme" id="Theme_uguw2"]
+LineEdit/colors/caret_color = Color(1, 1, 1, 1)
+LineEdit/colors/clear_button_color = Color(1, 1, 1, 1)
+LineEdit/colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+LineEdit/colors/font_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_outline_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_placeholder_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_selected_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_uneditable_color = Color(1, 1, 1, 1)
+LineEdit/colors/selection_color = Color(1, 1, 1, 1)
+LineEdit/constants/caret_width = 0
+LineEdit/constants/minimum_character_width = 0
+LineEdit/constants/outline_size = 0
+LineEdit/font_sizes/font_size = 16
+LineEdit/fonts/font = null
+LineEdit/icons/clear = null
+LineEdit/styles/focus = SubResource("StyleBoxFlat_4njdt")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_w4ii8")
+LineEdit/styles/read_only = null
 
 [node name="MAIN" type="Node2D"]
 
 [node name="Active" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1280.0
+offset_right = 850.0
 offset_bottom = 720.0
 
 [node name="BG" type="ColorRect" parent="Active"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.664
+anchor_bottom = 1.0
+offset_right = 285.6
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.147672, 0.147672, 0.147672, 1)
+
+[node name="ModSearch" type="Control" parent="Active"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -280.0
+offset_right = 180.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="Active/ModSearch"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.147672, 0.147672, 0.147672, 1)
+color = Color(0.194349, 0.194349, 0.194349, 1)
+
+[node name="Title" type="RichTextLabel" parent="Active/ModSearch"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = -40.0
+offset_right = 100.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[center]MOD SEARCH"
+
+[node name="ModSearchEdit" type="LineEdit" parent="Active/ModSearch"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.0
+offset_right = 180.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme = SubResource("Theme_uguw2")
+placeholder_text = "Enter mod name here"
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Active/ModSearch"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.068
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.92
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60

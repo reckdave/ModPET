@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://71mnunamljjc"]
+
+[ext_resource type="Texture2D" uid="uid://ceb4e0u0p7fb8" path="res://Assets/ICON.png" id="1_hy3jw"]
+
+[node name="ModSearchNode" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 360.0
+offset_bottom = 60.0
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+offset_right = 360.0
+offset_bottom = 60.0
+color = Color(0.144063, 0.144063, 0.144062, 1)
+
+[node name="ModIcon" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+texture = ExtResource("1_hy3jw")
+
+[node name="ModTitle" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 60.0
+offset_right = 360.0
+offset_bottom = 23.0
+grow_horizontal = 2
+bbcode_enabled = true
+text = "[center] KINITOFIXES"
+
+[node name="DownloadButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 140.0
+offset_top = 29.0
+offset_right = 290.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "DOWNLOAD"
